@@ -12,7 +12,13 @@ startButton.addEventListener("click", (event) => {
     if (nameInput.value !== "" && dateInput.value !== ""){
 
         if (new Date(dateInput.value) < Date.now()) {
-            alert("Please enter a future date");
+            let invalidDiv = document.createElement("div");
+            invalidDiv.classList.add("invalid");
+            invalidDiv.innerHTML = "Please enter a future date";
+            form.after(invalidDiv);
+            let remove = setTimeout(() => {
+                invalidDiv.remove();
+            }, 3000)
         }
 
         else {
@@ -45,7 +51,13 @@ startButton.addEventListener("click", (event) => {
     }
 
     else {
-        alert("Please fill in all fields");
+        let invalidDiv = document.createElement("div");
+        invalidDiv.classList.add("invalid");
+        invalidDiv.innerHTML = "Please fill in all fields";
+        form.after(invalidDiv);
+        let remove = setTimeout(() => {
+            invalidDiv.remove();
+        }, 3000)
     }
     
 });
