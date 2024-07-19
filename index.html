@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Count Down Timer</title>
+        <link rel="icon" href="images/clk.png" sizes="32x32" type="image/png">
+        <!-- main Style -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- Take Date, Time, and Name from User -->
+
+            <div class="form-container">
+                <form id="countdownForm">
+                    <div class="form-group">
+                        <label for="message">Event Name</label>
+                        <input type="text" id="name" class="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Enter a Date</label>
+                        <input type="date" id="date" class="date">
+                    </div>
+                    <button id="startButton">Start</button>
+                </form>
+            </div>
+
+            <!-- Timer Container -->
+
+            <div class="timer-container">
+                <div class="title">
+                    <h1>Count Down Timer</h1>
+                </div>
+                <div class="timer">
+                    <div class="days">
+                        <div class="value">0</div>
+                        <div class="text">Days</div>
+                    </div>
+                    <div class="hours">
+                        <div class="value">0</div>
+                        <div class="text">Hours</div>
+                    </div>
+                    <div class="minutes">
+                        <div class="value">0</div>
+                        <div class="text">Minutes</div>
+                    </div>
+                    <div class="seconds">
+                        <div class="value">0</div>
+                        <div class="text">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
